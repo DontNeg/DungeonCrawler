@@ -3,19 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Trigger
+  - TorchLight
+  - Torch
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Hazards
   - Water
   - UI
   - Trigger
   - Player
-  - 
-  - 
-  - 
+  - Enemy
+  - Seeds
+  - Object
   - 
   - 
   - 

@@ -3,14 +3,14 @@ using UnityEngine;
 public class Hole : MonoBehaviour
 {
     public Animator animator;
-    private Movement _player;
     private static readonly int IsTriggered = Animator.StringToHash("isTriggered");
+    private Player _player;
 
     private void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         animator.SetBool(IsTriggered,true);

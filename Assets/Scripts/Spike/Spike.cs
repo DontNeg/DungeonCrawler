@@ -1,16 +1,17 @@
+using System;
 using UnityEngine;
 
 public class Spike : MonoBehaviour
 {
     public Animator animator;
-    private Movement _player;
     private static readonly int IsPressed = Animator.StringToHash("isPressed");
+    private Player _player;
 
     private void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>();
+        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         animator.SetBool(IsPressed,true);
