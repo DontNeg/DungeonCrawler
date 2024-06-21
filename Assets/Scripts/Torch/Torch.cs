@@ -57,7 +57,7 @@ public class Torch : MonoBehaviour
     {
         _moveSpeed = (float)Math.Sqrt(
             Math.Pow(_player.transform.position.x - (transform.position.x - 1.5f), 2) +
-            Math.Pow(_player.transform.position.y - (transform.position.y + 1.5f), 2)   
+            Math.Pow(_player.transform.position.y - (transform.position.y + 1.5f), 2)
         );
         transform.rotation = new Quaternion(0, 0, 0, 0);
         transform.position = Vector3.Lerp(transform.position, VectorDirection(), Time.fixedDeltaTime * _moveSpeed);
